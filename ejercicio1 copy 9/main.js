@@ -5,7 +5,7 @@
   }
 
   mostrarDetalles() {
-    return this.numero +this.precio.toFixed(2);
+    return this.numero +this.precio;
   }
 }
 
@@ -24,7 +24,6 @@
 }
 
 document.querySelector('#agregarHabitacion').addEventListener('click', () => {
-  alert();
     let tipo = document.querySelector('#tipo-habitacion').value;
     let numero = parseInt(document.querySelector('#numero-habitacion').value);
     let precio = parseFloat(document.querySelector('#precio-habitacion').value);
@@ -38,5 +37,5 @@ document.querySelector('#agregarHabitacion').addEventListener('click', () => {
   let item = document.createElement('li');
   item.innerText = habitacion.mostrarDetalles();
    document.querySelector('#lista-habitaciones').appendChild(item);
-   
+    
 });
