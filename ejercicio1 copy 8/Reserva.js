@@ -9,4 +9,4 @@
     return this.nombreHuesped+this.fechaCheckout
   }
 }
-export default Reserva
+export default Reserva 
