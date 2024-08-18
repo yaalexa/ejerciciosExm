@@ -22,17 +22,30 @@
   }
 
   encontrarJugador(nombreJugador) {
-    return this.jugadores.find(j => j.nombre === nombreJugador);
+     for (let i = 0; i < this.jugadores.length; i++) {
+        let jugador = this.jugadores[i];
+        if (jugador.nombre === nombreJugador) {
+            return jugador; 
+        }
+    }
   }
 
   listarPuntajes() {
-    return this.jugadores.map(j => `${j.nombre}: ${j.puntaje} puntos`);
+     let resultados = [];
+
+    for (let i = 0; i < this.jugadores.length; i++) {
+        let jugador = this.jugadores[i];
+        let resultado = jugador.nombre+jugador.puntaje;
+        resultados.push(resultado);
+    }
+
+    return resultados;
   }
 }
 
 export class Liga {
   constructor() {
-    this.equipos = []; // Agregación: La liga tiene una lista de equipos
+    this.equipos = []; // Agregación
   }
 
   agregarEquipo(equipo) {
