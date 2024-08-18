@@ -53,6 +53,11 @@ export class Liga {
   }
 
   obtenerEquipo(nombreEquipo) {
-    return this.equipos.find(e => e.nombre === nombreEquipo);
+    for (let i = 0; i < this.equipos.length; i++) {
+        let equipo = this.equipos[i];
+        if (equipo.nombre === nombreEquipo) {
+            return equipo; 
+        }
+    }
   }
 }
