@@ -107,7 +107,7 @@ document.querySelector('#listarPuntajes').addEventListener('click', () => {
     let lista = document.querySelector('#lista-puntajes');
    for (let i = 0; i < listaPuntajes.length; i++) {
     let puntaje = listaPuntajes[i]; 
-    const item = document.createElement('li');
+    let item = document.createElement('li');
     item.innerText = puntaje;
     document.querySelector('#lista-puntajes').appendChild(item);
 }
