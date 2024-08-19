@@ -41,10 +41,10 @@
         return this.nombre+proyectosNombres;
     }
 }
-const proyectoAlpha = new Proyecto('Alpha');
-const proyectoBeta = new Proyecto('Beta');
-const miembroSofia = new Miembro('sofia');
-const miembroLaura = new Miembro('Laura');
+let proyectoAlpha = new Proyecto('Alpha');
+let proyectoBeta = new Proyecto('Beta');
+let miembroSofia = new Miembro('sofia');
+let miembroLaura = new Miembro('Laura');
 
 proyectoAlpha.agregarMiembro(miembroSofia);
 proyectoBeta.agregarMiembro(miembroSofia);
