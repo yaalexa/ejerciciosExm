@@ -1,4 +1,4 @@
-export class Admin {
+ class Admin {
   constructor(nombre) {
     this.tipo = 'Administrador';
     this.nombre = nombre;

@@ -36,9 +36,8 @@ class Producto {
 
 let producto;
 document.querySelector('#agregarP').addEventListener('click', () => {
-     let nombre = document.getElementById('nombre').value;
+  let nombre = document.getElementById('nombre').value;
   let cantidad = parseInt(document.getElementById('cantidad').value);
   producto = new Producto(nombre, cantidad);
-    document.getElementById('producto-info').innerText = 'Nombre:' + producto.getNombre() +
-        'Cantidad:' + producto.getCantidad(); 
+    document.getElementById('producto-info').innerText =  producto.getNombre()  + producto.getCantidad(); 
 })
