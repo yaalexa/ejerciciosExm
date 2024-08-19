@@ -79,13 +79,14 @@ document.querySelector('#md').addEventListener('click', () => {
 });
 
 document.querySelector('#mc').addEventListener('click', () => {
-    let totalComisiones = '';
+    
     for (let j = 0; j < ar.length; j++) {
         let are = ar[j];
+         let totalComisiones = '';
         for (let i = 0; i < are.vendedores.length; i++) {
             let vendedor = are.vendedores[i];
             let comision = vendedor.calcularComision(1000);
-            totalComisiones += comision;
+            totalComisiones += vendedor.nombre+comision;
         }
         document.querySelector('#comisiones').innerText += are.nombre + totalComisiones;
     }
